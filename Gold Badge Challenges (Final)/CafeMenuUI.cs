@@ -102,11 +102,12 @@ namespace Gold_Badge_Challenges__Final_
         private void ViewMenuItemByName()
         {
             Console.Clear();
-            Console.WriteLine("Enter the name of the meal you'd like to see:");
+            Console.WriteLine("Enter the number of the meal you'd like to see:");
 
-            string mealName = Console.ReadLine();
+            string mealNumberAsString = Console.ReadLine();
+            int mealNumberAsInt = int.Parse(mealNumberAsString);
 
-            Menu meal = _mealRepo.GetMealByName(mealName);
+            Menu meal = _mealRepo.GetMealByNumber(mealNumberAsInt);
 
             if (meal != null)
             {
@@ -126,7 +127,20 @@ namespace Gold_Badge_Challenges__Final_
         {
             ViewAllMenuItems();
 
-            Console.WriteLine();
+            Console.WriteLine("Enter the number of the meal you'd like to 86");
+            string input = Console.ReadLine();
+            int inputAsInt = int.Parse(input);
+
+            bool wasDeleted = _mealRepo.DeleteMenuItem(inputAsInt);
+
+            if (wasDeleted)
+            {
+                Console.WriteLine("Meal was 86'd!");
+            }
+            else
+            {
+                Console.WriteLine("Meal will not leave.");
+            }
         }
     }
 }
