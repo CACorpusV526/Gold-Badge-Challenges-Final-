@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _01_Cafe_Challenge_Repo_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace Gold_Badge_Challenges__Final_
 {
     class CafeMenuUI
     {
+        private MenuRepo _mealRepo = new MenuRepo();
+
         public void Run()
         {
             OperationsMenu();
@@ -50,6 +53,32 @@ namespace Gold_Badge_Challenges__Final_
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+
+        private void CreateAMenuItem()
+        {
+            Console.Clear();
+            Menu newMeal = new Menu();
+
+
+            Console.WriteLine("What would you like to call this meal?");
+            newMeal.MealName = Console.ReadLine();
+
+            Console.WriteLine("What number will this meal be assigned?");
+            string mealNumberAsString = Console.ReadLine();
+            newMeal.MealNumber = int.Parse(mealNumberAsString);
+
+            Console.WriteLine("Please describe this meal:");
+            newMeal.Description = Console.ReadLine();
+
+            Console.WriteLine("Please list the ingredients in this meal:");
+            newMeal.Ingredients = Console.ReadLine();
+
+            Console.WriteLine("How much will you charge for this meal? (Please use the format 0.00");
+            string priceAsString = Console.ReadLine();
+            newMeal.Price = double.Parse(priceAsString);
+
+            _mealRepo.AddMealToMenu(newMeal);
         }
     }
 }
