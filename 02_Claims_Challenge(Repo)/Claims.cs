@@ -35,19 +35,5 @@ namespace _02_Claims_Challenge_Repo_
             DateOfClaim = dateOfClaim;
             IsValid = isValid;
         }
-
-        public DataTable ClaimsTable()
-        {
-            DataTable claimsTable = new DataTable();
-            claimsTable.Columns.Add("Claim ID", typeof(int));
-            claimsTable.Columns.Add("Type", typeof(ClaimType));
-            claimsTable.Columns.Add("Description", typeof(string));
-            claimsTable.Columns.Add("Amount", typeof(double));
-            claimsTable.Columns.Add("Date Of Accident", typeof(DateTime));
-            claimsTable.Columns.Add("Date of Claim", typeof(DateTime));
-            claimsTable.Columns.Add("Is Valid", typeof(bool));
-
-            return claimsTable;
-        }
     }
 }
