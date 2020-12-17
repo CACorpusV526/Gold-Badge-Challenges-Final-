@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\01_Cafe_Challenge%28Repo%29\01_Cafe_Challenge%28Repo%29.csproj">
-      <Project>{B13B596A-0AB8-4F96-9486-2D893B90C51A}</Project>
+      <Project>{b13b596a-0ab8-4f96-9486-2d893b90c51a}</Project>
       <Name>01_Cafe_Challenge%28Repo%29</Name>
     </ProjectReference>
   </ItemGroup>

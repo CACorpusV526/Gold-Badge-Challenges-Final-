@@ -24,7 +24,7 @@ namespace Gold_Badge_Challenges__Final_
                 Console.WriteLine("Hey Boss, what would you like to do?\n" +
                     "1. Add/Create A Meal\n" +
                     "2. View All Current Meals Available\n" +
-                    "3. View A Meal By Name\n" +
+                    "3. View A Meal By Number\n" +
                     "4. 86 A Meal\n" +
                     "5. Exit");
 
@@ -34,18 +34,21 @@ namespace Gold_Badge_Challenges__Final_
                 {
                     case "1":
                         CreateAMenuItem();
+                        Console.WriteLine("Creating/Adding new meal to menu...\n");
                         break;
                     case "2":
+                        Console.WriteLine("Getting you choice...\n");
                         ViewAllMenuItems();
                         break;
                     case "3":
+                        Console.WriteLine("Getting you choice...\n");
                         ViewMenuItemByName();
                         break;
                     case "4":
                         ByeByeAMeal();
                         break;
                     case "5":
-                        Console.WriteLine("Until Next Time, Boss");
+                        Console.WriteLine("Until Next Time, Boss\n");
                         keepRunning = false;
                         break;
                     default:
@@ -53,7 +56,7 @@ namespace Gold_Badge_Challenges__Final_
                         break;
                 }
 
-                Console.WriteLine("Getting your choice...\n\nPress any key to continue...");
+                Console.WriteLine("\nPress any key to continue...");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -78,7 +81,7 @@ namespace Gold_Badge_Challenges__Final_
             Console.WriteLine("Please list the ingredients in this meal:");
             newMeal.Ingredients = Console.ReadLine();
 
-            Console.WriteLine("How much will you charge for this meal? (Please use the format 0.00");
+            Console.WriteLine("How much will you charge for this meal? (Please use the format 0.00)");
             string priceAsString = Console.ReadLine();
             newMeal.Price = double.Parse(priceAsString);
 
@@ -115,7 +118,7 @@ namespace Gold_Badge_Challenges__Final_
                     $"Price: {meal.Price}\n" +
                     $"Meal Name: {meal.MealName}\n" +
                     $"Description: {meal.Description}\n" +
-                    $"Ingredients1: {meal.Ingredients}");
+                    $"Ingredients: {meal.Ingredients}");
             }
             else
             {

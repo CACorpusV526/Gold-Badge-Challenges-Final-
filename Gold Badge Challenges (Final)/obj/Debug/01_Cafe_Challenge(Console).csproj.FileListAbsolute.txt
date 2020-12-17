@@ -1,0 +1,11 @@
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\obj\Debug\01_Cafe_Challenge(Console).csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\Gold Badge Challenges (Final).exe.config
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\Gold Badge Challenges (Final).exe
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\Gold Badge Challenges (Final).pdb
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\01_Cafe_Challenge(Repo).dll
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\01_Cafe_Challenge(Repo).pdb
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\bin\Debug\01_Cafe_Challenge(Repo).dll.config
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\obj\Debug\01_Cafe_Challenge(Console).csprojAssemblyReference.cache
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\obj\Debug\01_Cafe_Challenge(Console).csproj.CopyComplete
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\obj\Debug\Gold Badge Challenges (Final).exe
+C:\Users\carlo\source\repos\Gold Badge Challenges (Final)\Gold Badge Challenges (Final)\obj\Debug\Gold Badge Challenges (Final).pdb
