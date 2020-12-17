@@ -80,5 +80,18 @@ namespace Gold_Badge_Challenges__Final_
 
             _mealRepo.AddMealToMenu(newMeal);
         }
+
+        private void ViewAllMenuItems()
+        {
+            Console.Clear();
+            List<Menu> listOfMeals = _mealRepo.GetMenu();
+
+            foreach (Menu meal in listOfMeals)
+            {
+                Console.WriteLine("Meal Name: " + meal.MealName +
+                    "\nDescription: " + meal.Description +
+                    "\nPrice: " + meal.Price);
+            }
+        }
     }
 }
