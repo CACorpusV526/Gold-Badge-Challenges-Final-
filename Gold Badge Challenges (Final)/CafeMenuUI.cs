@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Gold_Badge_Challenges__Final_
 {
-    class Program
+    class CafeMenuUI
     {
-        static void Main(string[] args)
+        public void Run()
         {
-            CafeMenuUI program = new CafeMenuUI();
-            program.Run();
+
         }
     }
 }
