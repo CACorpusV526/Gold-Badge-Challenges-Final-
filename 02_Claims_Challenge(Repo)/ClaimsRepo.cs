@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_Claims_Challenge_Repo_
 {
-    class Program
+    class ClaimsRepo
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
