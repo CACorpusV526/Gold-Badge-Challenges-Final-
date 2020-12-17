@@ -20,9 +20,9 @@ namespace _01_Cafe_Challenge_Repo_
             return _listOfMeals;
         }
 
-        public bool DeleteMenuItem(string menuItem)
+        public bool DeleteMenuItem(int mealNumber)
         {
-            Menu meal = GetMealByName(menuItem);
+            Menu meal = GetMealByNumber(mealNumber);
 
             if (meal == null)
             {
@@ -42,11 +42,11 @@ namespace _01_Cafe_Challenge_Repo_
             }
         }
 
-        public Menu GetMealByName(string mealName)
+        public Menu GetMealByNumber(int mealNumber)
         {
             foreach(Menu meal in _listOfMeals)
             {
-                if (meal.MealName.ToLower() == mealName.ToLower())
+                if (meal.MealNumber == mealNumber)
                 {
                     return meal;
                 }

@@ -121,5 +121,12 @@ namespace Gold_Badge_Challenges__Final_
                 Console.WriteLine("No meal in the system by that name.");
             }
         }
+
+        private void ByeByeAMeal()
+        {
+            ViewAllMenuItems();
+
+            Console.WriteLine();
+        }
     }
 }
