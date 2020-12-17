@@ -24,8 +24,9 @@ namespace Gold_Badge_Challenges__Final_
                 Console.WriteLine("Hey Boss, what would you like to do?\n" +
                     "1. Add/Create A Meal\n" +
                     "2. View All Current Meals Available\n" +
-                    "3. 86 A Meal\n" +
-                    "4. Exit");
+                    "3. View A Meal By Name\n" +
+                    "4. 86 A Meal\n" +
+                    "5. Exit");
 
                 string input = Console.ReadLine();
 
@@ -38,9 +39,12 @@ namespace Gold_Badge_Challenges__Final_
                         ViewAllMenuItems();
                         break;
                     case "3":
-                        ByeByeAMeal();
+                        ViewMenuItemByName();
                         break;
                     case "4":
+                        ByeByeAMeal();
+                        break;
+                    case "5":
                         Console.WriteLine("Until Next Time, Boss");
                         keepRunning = false;
                         break;
@@ -88,9 +92,33 @@ namespace Gold_Badge_Challenges__Final_
 
             foreach (Menu meal in listOfMeals)
             {
-                Console.WriteLine("Meal Name: " + meal.MealName +
+                Console.WriteLine("#" + meal.MealNumber + 
+                    "\nMeal Name: " + meal.MealName +
                     "\nDescription: " + meal.Description +
                     "\nPrice: " + meal.Price);
+            }
+        }
+
+        private void ViewMenuItemByName()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter the name of the meal you'd like to see:");
+
+            string mealName = Console.ReadLine();
+
+            Menu meal = _mealRepo.GetMealByName(mealName);
+
+            if (meal != null)
+            {
+                Console.WriteLine($"#{meal.MealNumber}\n" +
+                    $"Price: {meal.Price}\n" +
+                    $"Meal Name: {meal.MealName}\n" +
+                    $"Description: {meal.Description}\n" +
+                    $"Ingredients1: {meal.Ingredients}");
+            }
+            else
+            {
+                Console.WriteLine("No meal in the system by that name.");
             }
         }
     }
