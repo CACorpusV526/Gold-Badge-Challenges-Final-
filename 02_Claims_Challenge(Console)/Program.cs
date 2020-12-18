@@ -11,6 +11,8 @@ namespace _02_Claims_Challenge_Console_
     {
         static void Main(string[] args)
         {
+            ClaimsUI program = new ClaimsUI();
+            program.Run();
         }
     }
 }
