@@ -4,4 +4,4 @@ knowledge is attained. This is a testament to what I both know and don't how to 
 All current/up-to-date code can be found at: https://github.com/CACorpusV526/Gold-Badge-Challenges-Final-
 
 ******In order to use this project it must either be cloned or downloaded
-via the +green code button in the main page of the above link******
+via the green code button in the main page of the above link******
