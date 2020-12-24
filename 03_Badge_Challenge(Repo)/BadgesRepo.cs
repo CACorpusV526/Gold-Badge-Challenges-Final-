@@ -6,31 +6,72 @@ using System.Threading.Tasks;
 
 namespace _03_Badge_Challenge_Repo_
 {
-    class BadgesRepo
+    public class BadgesRepo
     {
-        Dictionary<string, string> _badges = new Dictionary<string, string>();
-
-        public void CreateABadge(string badgeID, string doorAccess)
+        private Dictionary<int, Badges> _badges = new Dictionary<int, Badges>();
+        private Badges newBadge = new Badges() { };
+       
+        public void AddABadge(Badges newBadge)
         {
-            _badges.Add(badgeID, doorAccess);
+            _badges.Add(newBadge.BadgeID, newBadge);
         }
 
-        public Dictionary<string, string> GetBadgeDictionary()
+        public Dictionary<int, Badges> GetBadges()
         {
             return _badges;
         }
 
-        public void UpdateBadge(string ogBadge, Badges newBadge)
+        public bool UpdateBadge(int id, Badges newBadge)
         {
-            Badges oldBadge = GetBadgeDictionary(ogBadge)
+            Badges oldBadge = GetBadgeByID(id);
+
+            if (oldBadge != null)
+            {
+                oldBadge.BadgeID = newBadge.BadgeID;
+                oldBadge.AccessibleDoors = newBadge.AccessibleDoors;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public Badges GetBadgeByID(string id)
+        public bool RemoveADoor(int id)
         {
-            for (int i = 0; i < _badges.Count; i++)
+            Badges badge = GetBadgeByID(id);
+
+            if (badge == null)
             {
-                Console.WriteLine("Badge: {0}, Doors: {1}");
+                return false;
             }
+
+            int startCount = _badges.Count;
+            _badges.Remove(badge.BadgeID);
+
+            if (startCount > _badges.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Badges GetBadgeByID(int id)
+        {
+            Badges outBadge = new Badges();
+            foreach (KeyValuePair<int, Badges> badges in _badges)
+            {
+                if (_badges.ContainsKey(id))
+                {
+                    return outBadge;
+                }
+            }
+            return null;
         }
     }
 }
+

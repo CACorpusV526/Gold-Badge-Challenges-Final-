@@ -10,6 +10,8 @@ namespace _03_Badge_Challenge_Console_
     {
         static void Main(string[] args)
         {
+            BadgeUI program = new BadgeUI();
+            program.Run();
         }
     }
 }

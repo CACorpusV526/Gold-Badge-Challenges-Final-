@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _03_Badge_Challenge_Repo_
 {
-    class Badges
+    public class Badges
     {
         public int BadgeID { get; set; }
         public string AccessibleDoors { get; set; }
